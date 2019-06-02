@@ -71,7 +71,7 @@ def itemization_iterator(path, filing_id, fec_version_number):
         fec_header = next(reader)
         summary_row = next(reader)
         for line in reader:
-            if line:
+            if line and len(''.join(line)) >0:
                 form_type = get_itemization_type(line[0])
                 if not form_type:
                     print('bad itemization line')
