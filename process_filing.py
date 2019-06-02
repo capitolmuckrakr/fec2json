@@ -86,8 +86,8 @@ def itemization_iterator(path, filing_id, fec_version_number):
                         filing_id = path.strip('/').split('/')[-1].split('.')[0]
                     except:
                         filing_id = None
-            itemization['filing_id'] = filing_id
-            yield itemization
+                itemization['filing_id'] = filing_id
+                yield itemization
 
 def process_summary_row(summary_row, fec_version_number):
     #processes the second row of the filing, which is the form summary/topline row
